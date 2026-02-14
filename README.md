@@ -97,28 +97,6 @@ El **modelo polinomial de grado 3** fue seleccionado como modelo final debido a:
 - Mejor captura de patrones no lineales
 - Equilibrio óptimo entre complejidad y rendimiento
 
-## 🔍 Hallazgos Clave
-
-El modelo permite identificar cómo factores como la estación del año, condiciones climáticas y momento del día influyen en la demanda de bicicletas, proporcionando insights valiosos para la gestión del sistema de alquiler.
-
-## 💻 Uso
-
-1. Clonar el repositorio:
-```bash
-git clone [URL_DEL_REPOSITORIO]
-cd [NOMBRE_DEL_REPOSITORIO]
-```
-
-2. Instalar dependencias:
-```bash
-pip install -r requirements.txt
-```
-
-3. Ejecutar el notebook:
-```bash
-jupyter notebook notebooks/modelo_regresion.ipynb
-```
-
 ## 📝 Notas
 
 - Se utiliza `RobustScaler` por su resistencia a valores atípicos
@@ -127,8 +105,4 @@ jupyter notebook notebooks/modelo_regresion.ipynb
 
 ## 👥 Autor
 
-[Tu Nombre]
-
-## 📄 Licencia
-
-[Especificar licencia si aplica]
+David Cortes 
