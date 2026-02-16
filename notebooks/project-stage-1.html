@@ -7510,31 +7510,13 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=de156057-263b-4719-81e8-4e69bfcb5583">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span><span class="p">,</span> <span class="n">Lasso</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span><span class="p">,</span> <span class="n">GridSearchCV</span><span class="p">,</span> <span class="n">KFold</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">PolynomialFeatures</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">,</span> <span class="n">RobustScaler</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">root_mean_squared_error</span><span class="p">,</span> <span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">r2_score</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=de156057-263b-4719-81e8-4e69bfcb5583">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=df73bdef-cfbd-4ca3-8848-c9d4da325135">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Carga-y-Exploraci%C3%B3n-Inicial-de-Datos">Carga y Exploración Inicial de Datos<a class="anchor-link" href="#Carga-y-Exploraci%C3%B3n-Inicial-de-Datos">¶</a></h1><h2 id="Carga-del-Dataset">Carga del Dataset<a class="anchor-link" href="#Carga-del-Dataset">¶</a></h2><p>Se procede a cargar el dataset desde el archivo CSV ubicado en la carpeta <code>data/</code>. Este archivo contiene los datos necesarios para la Etapa 1 del proyecto.</p>
 <h2 id="An%C3%A1lisis-Estad%C3%ADstico-Descriptivo">Análisis Estadístico Descriptivo<a class="anchor-link" href="#An%C3%A1lisis-Estad%C3%ADstico-Descriptivo">¶</a></h2><p>Se utiliza la función <code>describe()</code> para obtener un resumen estadístico de las variables numéricas presentes en el dataset. Esta función proporciona métricas clave como:</p>
 <ul>
@@ -7548,28 +7530,12 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=75152c74-37b6-4af1-9a13-327df03eff08">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">data_raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"../data/Datos_Etapa-1.csv"</span><span class="p">)</span>
-<span class="n">data_raw</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-<span class="n">data_raw</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=75152c74-37b6-4af1-9a13-327df03eff08">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -7673,33 +7639,18 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Identificaci%C3%B3n-de-Valores-Faltantes">Identificación de Valores Faltantes<a class="anchor-link" href="#Identificaci%C3%B3n-de-Valores-Faltantes">¶</a></h2><p>Se analiza la presencia de valores nulos en el dataset mediante <code>isna().sum()</code>, que cuenta la cantidad de valores faltantes por columna.</p>
 <p>Este paso permite identificar qué variables tienen datos incompletos y determinar la estrategia de limpieza apropiada (imputación o eliminación).</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e368e73f-912f-4bba-96e7-c15884af4e41">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">data_raw</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=e368e73f-912f-4bba-96e7-c15884af4e41">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[45]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>season         0
 weekday        0
@@ -7720,33 +7671,18 @@ dtype: int64</pre>
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Detecci%C3%B3n-de-Registros-Duplicados">Detección de Registros Duplicados<a class="anchor-link" href="#Detecci%C3%B3n-de-Registros-Duplicados">¶</a></h2><p>Se verifica la cantidad de filas duplicadas en el dataset usando <code>duplicated().sum()</code>. Esta función identifica registros que son idénticos en todas sus columnas.</p>
 <p>Detectar duplicados es esencial para asegurar la calidad de los datos y evitar sesgos en el análisis posterior.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=367c2697-0f93-4c97-b094-482e0b561544">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">data_raw</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=367c2697-0f93-4c97-b094-482e0b561544">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>np.int64(42)</pre>
 </div>
@@ -7758,34 +7694,18 @@ dtype: int64</pre>
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Eliminaci%C3%B3n-de-Duplicados">Eliminación de Duplicados<a class="anchor-link" href="#Eliminaci%C3%B3n-de-Duplicados">¶</a></h2><p>Se procede a eliminar todas las filas duplicadas del dataset usando <code>drop_duplicates()</code>. Posteriormente, se verifica con <code>duplicated().sum()</code> que la eliminación fue exitosa.</p>
 <p>Este proceso asegura que cada registro sea único, evitando redundancia y posibles distorsiones en el análisis de datos.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0bb64ac3-ed98-46eb-8702-e467787e7046">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data_raw</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
-<span class="n">data</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=0bb64ac3-ed98-46eb-8702-e467787e7046">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>np.int64(0)</pre>
 </div>
@@ -7797,34 +7717,17 @@ dtype: int64</pre>
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Codificaci%C3%B3n-de-Variables-Categ%C3%B3ricas">Codificación de Variables Categóricas<a class="anchor-link" href="#Codificaci%C3%B3n-de-Variables-Categ%C3%B3ricas">¶</a></h2><p>Se aplica <strong>One-Hot Encoding</strong> a las variables categóricas (<code>season</code>, <code>weathersit</code>, <code>time_of_day</code>), transformándolas en variables binarias (0 o 1).</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7fcb0036-c368-400c-919c-ba68f13c48bd">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">data_encoded</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">data_encoded</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data_encoded</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'season'</span><span class="p">,</span> <span class="s1">'weathersit'</span><span class="p">,</span> <span class="s1">'time_of_day'</span><span class="p">],</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">data_encoded</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=7fcb0036-c368-400c-919c-ba68f13c48bd">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -7958,8 +7861,7 @@ dtype: int64</pre>
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Preparaci%C3%B3n-de-Datos-para-Entrenamiento">Preparación de Datos para Entrenamiento<a class="anchor-link" href="#Preparaci%C3%B3n-de-Datos-para-Entrenamiento">¶</a></h2><p>Se separan las variables predictoras (features) de la variable objetivo:</p>
 <ul>
 <li><strong>X</strong>: Contiene todas las variables independientes (features) excepto <code>cnt</code></li>
@@ -7975,85 +7877,48 @@ dtype: int64</pre>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=cf8764c4-44dc-4d39-b348-1fa9406baa0a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">data_encoded</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'cnt'</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"columns"</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">data_encoded</span><span class="p">[</span><span class="s1">'cnt'</span><span class="p">]</span>
-<span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">77</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=cf8764c4-44dc-4d39-b348-1fa9406baa0a">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b039c5a5-bc8e-430a-b4bb-b7e298c206be">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Creaci%C3%B3n-de-Features-Polinomiales-(Grado-2)">Creación de Features Polinomiales (Grado 2)<a class="anchor-link" href="#Creaci%C3%B3n-de-Features-Polinomiales-(Grado-2)">¶</a></h2><p>Se generan características polinomiales de grado 2 mediante <code>PolynomialFeatures</code>. Esto permite capturar relaciones no lineales entre variables, creando términos cuadráticos e interacciones entre features.</p>
-<p>Posteriormente, se normaliza el dataset transformado usando <strong>RobustScaler</strong> para mantener todas las variables en una escala comparable y preservar la estabilidad numérica del modelo.</p>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Creaci%C3%B3n-de-Features-Polinomiales-para-Variables-Num%C3%A9ricas-(Grado-2)">Creación de Features Polinomiales para Variables Numéricas (Grado 2)<a class="anchor-link" href="#Creaci%C3%B3n-de-Features-Polinomiales-para-Variables-Num%C3%A9ricas-(Grado-2)">¶</a></h2><p>Se aplica una estrategia híbrida que combina transformación polinomial solo en variables numéricas continuas, manteniendo las variables categóricas sin modificar.</p>
+<p><strong>Proceso:</strong></p>
+<ol>
+<li><p><strong>Separación de variables</strong>: Se dividen las variables numéricas (<code>temp</code>, <code>atemp</code>, <code>hum</code>, <code>windspeed</code>) de las categóricas codificadas</p>
+</li>
+<li><p><strong>Transformación polinomial</strong>: Se aplica <code>PolynomialFeatures</code> de grado 2 únicamente a las variables numéricas, generando términos cuadráticos e interacciones</p>
+</li>
+<li><p><strong>Normalización</strong>: Se estandarizan las features polinomiales con <code>RobustScaler</code> para mantener estabilidad numérica</p>
+</li>
+<li><p><strong>Recombinación</strong>: Se concatenan las variables numéricas transformadas con las variables categóricas originales, creando el dataset completo de entrenamiento</p>
+</li>
+</ol>
+<p>Esta aproximación permite capturar relaciones no lineales en variables climáticas sin afectar la interpretación de las variables categóricas.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ba6fb9ee-ae27-4397-8918-c4699a0b2c9b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">pol_2</span> <span class="o">=</span> <span class="n">PolynomialFeatures</span><span class="p">(</span><span class="n">degree</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">x_train_pol2</span> <span class="o">=</span> <span class="n">pol_2</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_train</span><span class="p">)</span>
-
-<span class="n">pol_2_scaler</span> <span class="o">=</span> <span class="n">RobustScaler</span><span class="p">()</span>
-<span class="n">x_train_pol2</span> <span class="o">=</span> <span class="n">pol_2_scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_train_pol2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=ba6fb9ee-ae27-4397-8918-c4699a0b2c9b">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=958536af-5fd4-4574-a6f9-3dd47139e8d7">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Entrenamiento-del-Modelo-de-Regresi%C3%B3n-Polinomial-(Grado-2)">Entrenamiento del Modelo de Regresión Polinomial (Grado 2)<a class="anchor-link" href="#Entrenamiento-del-Modelo-de-Regresi%C3%B3n-Polinomial-(Grado-2)">¶</a></h2><p>Se entrena un modelo de <strong>Regresión Lineal</strong> utilizando las características polinomiales de grado 2. El modelo aprende los pesos óptimos que minimizan el error entre las predicciones y los valores reales de demanda en el conjunto de entrenamiento.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e8c12bf6-75fb-42b7-bf2e-75afad907234">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">reg_polinomial2</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train_pol2</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=e8c12bf6-75fb-42b7-bf2e-75afad907234">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4eb3ab64-abc4-4f48-b855-be44311d06f1">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Transformaci%C3%B3n-del-Conjunto-de-Prueba">Transformación del Conjunto de Prueba<a class="anchor-link" href="#Transformaci%C3%B3n-del-Conjunto-de-Prueba">¶</a></h2><p>Se aplican las mismas transformaciones al conjunto de prueba:</p>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Transformaci%C3%B3n-del-Conjunto-de-Prueba-(Grado-2)">Transformación del Conjunto de Prueba (Grado 2)<a class="anchor-link" href="#Transformaci%C3%B3n-del-Conjunto-de-Prueba-(Grado-2)">¶</a></h2><p>Se aplican las mismas transformaciones al conjunto de prueba:</p>
 <ul>
 <li>Se generan características polinomiales de grado 2 usando el transformador ajustado previamente</li>
 <li>Se normaliza con el escalador ya entrenado</li>
@@ -8061,28 +7926,13 @@ dtype: int64</pre>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f9e1e3d4-cd32-47a5-b012-fb9a648b909a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">x_test_pol2</span> <span class="o">=</span> <span class="n">pol_2</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
-<span class="n">x_test_pol2</span> <span class="o">=</span> <span class="n">pol_2_scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x_test_pol2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=f9e1e3d4-cd32-47a5-b012-fb9a648b909a">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=997a4df3-a92d-4d5a-8ae7-df1804eb52a9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Evaluaci%C3%B3n-del-Modelo-Polinomial-(Grado-2)">Evaluación del Modelo Polinomial (Grado 2)<a class="anchor-link" href="#Evaluaci%C3%B3n-del-Modelo-Polinomial-(Grado-2)">¶</a></h2><p>Se realizan predicciones sobre el conjunto de prueba y se evalúa el rendimiento del modelo mediante tres métricas:</p>
 <ul>
 <li><strong>RMSE</strong> (Root Mean Squared Error): Mide el error promedio de las predicciones, penalizando más los errores grandes</li>
@@ -8092,36 +7942,17 @@ dtype: int64</pre>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b2ce2001-3168-4404-90cd-7b2d1f7baaa5">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">y_pred_pol2</span> <span class="o">=</span> <span class="n">reg_polinomial2</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test_pol2</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'------ Modelo de regresión polinomial grado 2 ----'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"RMSE: </span><span class="si">{</span><span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred_pol2</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"MAE: </span><span class="si">{</span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred_pol2</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'R²: </span><span class="si">{</span><span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred_pol2</span><span class="p">)</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=b2ce2001-3168-4404-90cd-7b2d1f7baaa5">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>------ Modelo de regresión polinomial grado 2 ----
-RMSE: 135.96
-MAE: 99.08
-R²: 0.45
+RMSE: 138.46
+MAE: 102.41
+R²: 0.43
 </pre>
 </div>
 </div>
@@ -8132,64 +7963,40 @@ R²: 0.45
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Creaci%C3%B3n-de-Features-Polinomiales-(Grado-3)">Creación de Features Polinomiales (Grado 3)<a class="anchor-link" href="#Creaci%C3%B3n-de-Features-Polinomiales-(Grado-3)">¶</a></h2><p>Se generan características polinomiales de grado 3 mediante <code>PolynomialFeatures</code>. Esto permite capturar relaciones no lineales más complejas entre variables, creando términos cúbicos e interacciones de mayor orden.</p>
-<p>Posteriormente, se normaliza el dataset transformado usando <strong>RobustScaler</strong> para mantener todas las variables en una escala comparable y preservar la estabilidad numérica del modelo.</p>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Creaci%C3%B3n-de-Features-Polinomiales-para-Variables-Num%C3%A9ricas-(Grado-3)">Creación de Features Polinomiales para Variables Numéricas (Grado 3)<a class="anchor-link" href="#Creaci%C3%B3n-de-Features-Polinomiales-para-Variables-Num%C3%A9ricas-(Grado-3)">¶</a></h2><p>Se replica el proceso anterior utilizando un grado polinomial más alto para capturar relaciones no lineales más complejas.</p>
+<p><strong>Proceso:</strong></p>
+<ol>
+<li><p><strong>Transformación polinomial de grado 3</strong>: Se generan términos cúbicos e interacciones de mayor orden para las variables numéricas</p>
+</li>
+<li><p><strong>Normalización</strong>: Se aplica <code>RobustScaler</code> para estandarizar las features polinomiales generadas</p>
+</li>
+<li><p><strong>Recombinación</strong>: Se concatenan las variables numéricas transformadas con las variables categóricas originales</p>
+</li>
+</ol>
+<p>Este enfoque permite al modelo capturar patrones más complejos en los datos climáticos, mejorando potencialmente la capacidad predictiva a costa de mayor complejidad.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=134497a0-8a2a-4a4d-a4f3-d5856025b63c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">pol_3</span> <span class="o">=</span> <span class="n">PolynomialFeatures</span><span class="p">(</span><span class="n">degree</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">x_train_pol3</span> <span class="o">=</span> <span class="n">pol_3</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_train</span><span class="p">)</span>
-
-<span class="n">pol_3_scaler</span> <span class="o">=</span> <span class="n">RobustScaler</span><span class="p">()</span>
-<span class="n">x_train_pol3</span> <span class="o">=</span> <span class="n">pol_3_scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_train_pol3</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=134497a0-8a2a-4a4d-a4f3-d5856025b63c">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f50ffc1e-d2d4-47ed-a0be-6483ce91eaef">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Entrenamiento-del-Modelo-de-Regresi%C3%B3n-Polinomial-(Grado-3)">Entrenamiento del Modelo de Regresión Polinomial (Grado 3)<a class="anchor-link" href="#Entrenamiento-del-Modelo-de-Regresi%C3%B3n-Polinomial-(Grado-3)">¶</a></h2><p>Se entrena un modelo de <strong>Regresión Lineal</strong> utilizando las características polinomiales de grado 3. El modelo aprende los pesos óptimos que minimizan el error entre las predicciones y los valores reales de demanda en el conjunto de entrenamiento.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=81305345-b3dc-4ced-8536-4e1c593d46f3">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">reg_polinomial3</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train_pol3</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=81305345-b3dc-4ced-8536-4e1c593d46f3">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=06c12988-9a38-4509-99ff-1a08f121795d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Transformaci%C3%B3n-del-Conjunto-de-Prueba">Transformación del Conjunto de Prueba<a class="anchor-link" href="#Transformaci%C3%B3n-del-Conjunto-de-Prueba">¶</a></h2><p>Se aplican las mismas transformaciones al conjunto de prueba:</p>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Transformaci%C3%B3n-del-Conjunto-de-Prueba-(Grado-3)">Transformación del Conjunto de Prueba (Grado 3)<a class="anchor-link" href="#Transformaci%C3%B3n-del-Conjunto-de-Prueba-(Grado-3)">¶</a></h2><p>Se aplican las mismas transformaciones al conjunto de prueba:</p>
 <ul>
 <li>Se generan características polinomiales de grado 3 usando el transformador ajustado previamente</li>
 <li>Se normaliza con el escalador ya entrenado</li>
@@ -8197,28 +8004,13 @@ R²: 0.45
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7b2b1ed0-a0ab-4ba1-a54e-20cd5c29d879">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">x_test_pol3</span> <span class="o">=</span> <span class="n">pol_3</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
-<span class="n">x_test_pol3</span> <span class="o">=</span> <span class="n">pol_3_scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x_test_pol3</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=7b2b1ed0-a0ab-4ba1-a54e-20cd5c29d879">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4e8a87e6">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Evaluaci%C3%B3n-del-Modelo-Polinomial-(Grado-3)">Evaluación del Modelo Polinomial (Grado 3)<a class="anchor-link" href="#Evaluaci%C3%B3n-del-Modelo-Polinomial-(Grado-3)">¶</a></h2><p>Se realizan predicciones sobre el conjunto de prueba y se evalúa el rendimiento del modelo mediante tres métricas:</p>
 <ul>
 <li><strong>RMSE</strong> (Root Mean Squared Error): Mide el error promedio de las predicciones, penalizando más los errores grandes</li>
@@ -8228,36 +8020,17 @@ R²: 0.45
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=df831741-626f-42bf-966e-9ed895f222a4">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [57]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">y_pred_pol3</span> <span class="o">=</span> <span class="n">reg_polinomial3</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test_pol3</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'------ Modelo de regresión polinomial grado 3 ----'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"RMSE: </span><span class="si">{</span><span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred_pol3</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"MAE: </span><span class="si">{</span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred_pol3</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'R²: </span><span class="si">{</span><span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred_pol3</span><span class="p">)</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=df831741-626f-42bf-966e-9ed895f222a4">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>------ Modelo de regresión polinomial grado 3 ----
-RMSE: 132.31
-MAE: 96.12
-R²: 0.48
+RMSE: 136.30
+MAE: 100.19
+R²: 0.45
 </pre>
 </div>
 </div>
@@ -8268,11 +8041,10 @@ R²: 0.48
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Selecci%C3%B3n-del-Modelo-%C3%93ptimo">Selección del Modelo Óptimo<a class="anchor-link" href="#Selecci%C3%B3n-del-Modelo-%C3%93ptimo">¶</a></h2><p>Se selecciona el <strong>modelo de grado 3</strong> como el más adecuado para predecir la demanda de bicicletas.</p>
 <p><strong>Justificación:</strong></p>
-<p>El modelo de grado 3 presenta un <strong>RMSE de 132.31</strong>, menor que el de grado 2 (RMSE: 135.96). Esta mejora indica que:</p>
+<p>El modelo de grado 3 presenta un <strong>RMSE de 136.30</strong>, menor que el de grado 2 (RMSE: 138.46). Esta mejora indica que:</p>
 <ul>
 <li>Realiza predicciones más precisas</li>
 <li>Captura mejor los patrones en los datos</li>
@@ -8287,8 +8059,7 @@ R²: 0.48
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Preparaci%C3%B3n-de-Datos-para-Modelo-Lasso">Preparación de Datos para Modelo Lasso<a class="anchor-link" href="#Preparaci%C3%B3n-de-Datos-para-Modelo-Lasso">¶</a></h2><p>Se preparan los datos específicamente para el modelo de regresión Lasso:</p>
 <ul>
 <li>Se separan las variables predictoras (todas excepto <code>cnt</code>) de la variable objetivo</li>
@@ -8299,30 +8070,13 @@ R²: 0.48
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2672fc92">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [58]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">lasso_scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
-<span class="n">x_lasso</span> <span class="o">=</span> <span class="n">data_encoded</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'cnt'</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"columns"</span><span class="p">)</span>
-<span class="n">y_lasso</span> <span class="o">=</span> <span class="n">data_encoded</span><span class="p">[</span><span class="s1">'cnt'</span><span class="p">]</span>
-<span class="n">x_train_lasso</span><span class="p">,</span> <span class="n">x_test_lasso</span><span class="p">,</span> <span class="n">y_train_lasso</span><span class="p">,</span> <span class="n">y_test_lasso</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">x_lasso</span><span class="p">,</span> <span class="n">y_lasso</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">77</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=2672fc92">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6a0699ba">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Configuraci%C3%B3n-del-Modelo-Lasso">Configuración del Modelo Lasso<a class="anchor-link" href="#Configuraci%C3%B3n-del-Modelo-Lasso">¶</a></h2><p>Se configura la validación cruzada y el modelo de regresión Lasso:</p>
 <ul>
 <li><strong>KFold</strong>: Se divide el conjunto de entrenamiento en 10 particiones (folds) para validación cruzada</li>
@@ -8333,31 +8087,13 @@ R²: 0.48
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=eafc5560">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [59]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">lasso_columns</span> <span class="o">=</span> <span class="n">x_lasso</span><span class="o">.</span><span class="n">columns</span>
-<span class="n">x_train_lasso</span> <span class="o">=</span> <span class="n">lasso_scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_train_lasso</span><span class="p">)</span>
-<span class="n">x_train_lasso</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x_train_lasso</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">lasso_columns</span><span class="p">)</span>
-<span class="n">kfold</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">77</span><span class="p">)</span>
-<span class="n">lasso</span> <span class="o">=</span> <span class="n">Lasso</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=eafc5560">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3927ac3a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Definici%C3%B3n-de-Hiperpar%C3%A1metros-a-Evaluar">Definición de Hiperparámetros a Evaluar<a class="anchor-link" href="#Definici%C3%B3n-de-Hiperpar%C3%A1metros-a-Evaluar">¶</a></h2><p>Se define el espacio de búsqueda para el hiperparámetro de regularización α (alpha):</p>
 <ul>
 <li>Se evalúan los valores α = [1, 2, 3, 4, 5]</li>
@@ -8367,28 +8103,13 @@ R²: 0.48
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=dba87a43">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [60]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">a_options</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'alpha'</span><span class="p">:</span> <span class="n">a_options</span><span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=dba87a43">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2885d6ee">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="B%C3%BAsqueda-de-Hiperpar%C3%A1metro-%C3%93ptimo-con-GridSearchCV">Búsqueda de Hiperparámetro Óptimo con GridSearchCV<a class="anchor-link" href="#B%C3%BAsqueda-de-Hiperpar%C3%A1metro-%C3%93ptimo-con-GridSearchCV">¶</a></h2><p>Se ejecuta <strong>GridSearchCV</strong> para encontrar el mejor valor de α mediante validación cruzada:</p>
 <ul>
 <li>El modelo Lasso se entrena con cada valor de α en <code>param_grid</code></li>
@@ -8399,29 +8120,14 @@ R²: 0.48
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c759bed8">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [61]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">lasso</span><span class="p">,</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">kfold</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">grid</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train_lasso</span><span class="p">,</span> <span class="n">y_train_lasso</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=c759bed8">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[61]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<style>#sk-container-id-3 {
+<style>#sk-container-id-1 {
   /* Definition of color scheme common for light and dark mode */
   --sklearn-color-text: #000;
   --sklearn-color-text-muted: #666;
@@ -8438,7 +8144,7 @@ R²: 0.48
   --sklearn-color-fitted-level-3: cornflowerblue;
 }
 
-#sk-container-id-3.light {
+#sk-container-id-1.light {
   /* Specific color for light theme */
   --sklearn-color-text-on-default-background: black;
   --sklearn-color-background: white;
@@ -8446,22 +8152,22 @@ R²: 0.48
   --sklearn-color-icon: #696969;
 }
 
-#sk-container-id-3.dark {
+#sk-container-id-1.dark {
   --sklearn-color-text-on-default-background: white;
   --sklearn-color-background: #111;
   --sklearn-color-border-box: white;
   --sklearn-color-icon: #878787;
 }
 
-#sk-container-id-3 {
+#sk-container-id-1 {
   color: var(--sklearn-color-text);
 }
 
-#sk-container-id-3 pre {
+#sk-container-id-1 pre {
   padding: 0;
 }
 
-#sk-container-id-3 input.sk-hidden--visually {
+#sk-container-id-1 input.sk-hidden--visually {
   border: 0;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
@@ -8473,7 +8179,7 @@ R²: 0.48
   width: 1px;
 }
 
-#sk-container-id-3 div.sk-dashed-wrapped {
+#sk-container-id-1 div.sk-dashed-wrapped {
   border: 1px dashed var(--sklearn-color-line);
   margin: 0 0.4em 0.5em 0.4em;
   box-sizing: border-box;
@@ -8481,7 +8187,7 @@ R²: 0.48
   background-color: var(--sklearn-color-background);
 }
 
-#sk-container-id-3 div.sk-container {
+#sk-container-id-1 div.sk-container {
   /* jupyter's `normalize.less` sets `[hidden] { display: none; }`
      but bootstrap.min.css set `[hidden] { display: none !important; }`
      so we also need the `!important` here to be able to override the
@@ -8491,7 +8197,7 @@ R²: 0.48
   position: relative;
 }
 
-#sk-container-id-3 div.sk-text-repr-fallback {
+#sk-container-id-1 div.sk-text-repr-fallback {
   display: none;
 }
 
@@ -8507,14 +8213,14 @@ div.sk-item {
 
 /* Parallel-specific style estimator block */
 
-#sk-container-id-3 div.sk-parallel-item::after {
+#sk-container-id-1 div.sk-parallel-item::after {
   content: "";
   width: 100%;
   border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
   flex-grow: 1;
 }
 
-#sk-container-id-3 div.sk-parallel {
+#sk-container-id-1 div.sk-parallel {
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -8522,28 +8228,28 @@ div.sk-item {
   position: relative;
 }
 
-#sk-container-id-3 div.sk-parallel-item {
+#sk-container-id-1 div.sk-parallel-item {
   display: flex;
   flex-direction: column;
 }
 
-#sk-container-id-3 div.sk-parallel-item:first-child::after {
+#sk-container-id-1 div.sk-parallel-item:first-child::after {
   align-self: flex-end;
   width: 50%;
 }
 
-#sk-container-id-3 div.sk-parallel-item:last-child::after {
+#sk-container-id-1 div.sk-parallel-item:last-child::after {
   align-self: flex-start;
   width: 50%;
 }
 
-#sk-container-id-3 div.sk-parallel-item:only-child::after {
+#sk-container-id-1 div.sk-parallel-item:only-child::after {
   width: 0;
 }
 
 /* Serial-specific style estimator block */
 
-#sk-container-id-3 div.sk-serial {
+#sk-container-id-1 div.sk-serial {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8561,14 +8267,14 @@ clickable and can be expanded/collapsed.
 
 /* Pipeline and ColumnTransformer style (default) */
 
-#sk-container-id-3 div.sk-toggleable {
+#sk-container-id-1 div.sk-toggleable {
   /* Default theme specific background. It is overwritten whether we have a
   specific estimator or a Pipeline/ColumnTransformer */
   background-color: var(--sklearn-color-background);
 }
 
 /* Toggleable label */
-#sk-container-id-3 label.sk-toggleable__label {
+#sk-container-id-1 label.sk-toggleable__label {
   cursor: pointer;
   display: flex;
   width: 100%;
@@ -8581,13 +8287,13 @@ clickable and can be expanded/collapsed.
   gap: 0.5em;
 }
 
-#sk-container-id-3 label.sk-toggleable__label .caption {
+#sk-container-id-1 label.sk-toggleable__label .caption {
   font-size: 0.6rem;
   font-weight: lighter;
   color: var(--sklearn-color-text-muted);
 }
 
-#sk-container-id-3 label.sk-toggleable__label-arrow:before {
+#sk-container-id-1 label.sk-toggleable__label-arrow:before {
   /* Arrow on the left of the label */
   content: "▸";
   float: left;
@@ -8595,25 +8301,25 @@ clickable and can be expanded/collapsed.
   color: var(--sklearn-color-icon);
 }
 
-#sk-container-id-3 label.sk-toggleable__label-arrow:hover:before {
+#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {
   color: var(--sklearn-color-text);
 }
 
 /* Toggleable content - dropdown */
 
-#sk-container-id-3 div.sk-toggleable__content {
+#sk-container-id-1 div.sk-toggleable__content {
   display: none;
   text-align: left;
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-0);
 }
 
-#sk-container-id-3 div.sk-toggleable__content.fitted {
+#sk-container-id-1 div.sk-toggleable__content.fitted {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
 
-#sk-container-id-3 div.sk-toggleable__content pre {
+#sk-container-id-1 div.sk-toggleable__content pre {
   margin: 0.2em;
   border-radius: 0.25em;
   color: var(--sklearn-color-text);
@@ -8621,78 +8327,78 @@ clickable and can be expanded/collapsed.
   background-color: var(--sklearn-color-unfitted-level-0);
 }
 
-#sk-container-id-3 div.sk-toggleable__content.fitted pre {
+#sk-container-id-1 div.sk-toggleable__content.fitted pre {
   /* unfitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
 
-#sk-container-id-3 input.sk-toggleable__control:checked~div.sk-toggleable__content {
+#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {
   /* Expand drop-down */
   display: block;
   width: 100%;
   overflow: visible;
 }
 
-#sk-container-id-3 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
+#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
   content: "▾";
 }
 
 /* Pipeline/ColumnTransformer-specific style */
 
-#sk-container-id-3 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 
-#sk-container-id-3 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-1 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
   background-color: var(--sklearn-color-fitted-level-2);
 }
 
 /* Estimator-specific style */
 
 /* Colorize estimator box */
-#sk-container-id-3 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 
-#sk-container-id-3 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-1 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-2);
 }
 
-#sk-container-id-3 div.sk-label label.sk-toggleable__label,
-#sk-container-id-3 div.sk-label label {
+#sk-container-id-1 div.sk-label label.sk-toggleable__label,
+#sk-container-id-1 div.sk-label label {
   /* The background is the default theme color */
   color: var(--sklearn-color-text-on-default-background);
 }
 
 /* On hover, darken the color of the background */
-#sk-container-id-3 div.sk-label:hover label.sk-toggleable__label {
+#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 
 /* Label box, darken color on hover, fitted */
-#sk-container-id-3 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
+#sk-container-id-1 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-fitted-level-2);
 }
 
 /* Estimator label */
 
-#sk-container-id-3 div.sk-label label {
+#sk-container-id-1 div.sk-label label {
   font-family: monospace;
   font-weight: bold;
   line-height: 1.2em;
 }
 
-#sk-container-id-3 div.sk-label-container {
+#sk-container-id-1 div.sk-label-container {
   text-align: center;
 }
 
 /* Estimator-specific */
-#sk-container-id-3 div.sk-estimator {
+#sk-container-id-1 div.sk-estimator {
   font-family: monospace;
   border: 1px dotted var(--sklearn-color-border-box);
   border-radius: 0.25em;
@@ -8702,18 +8408,18 @@ clickable and can be expanded/collapsed.
   background-color: var(--sklearn-color-unfitted-level-0);
 }
 
-#sk-container-id-3 div.sk-estimator.fitted {
+#sk-container-id-1 div.sk-estimator.fitted {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
 
 /* on hover */
-#sk-container-id-3 div.sk-estimator:hover {
+#sk-container-id-1 div.sk-estimator:hover {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 
-#sk-container-id-3 div.sk-estimator.fitted:hover {
+#sk-container-id-1 div.sk-estimator.fitted:hover {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-2);
 }
@@ -8804,7 +8510,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 
 /* "?"-specific style due to the `<a>` HTML tag */
 
-#sk-container-id-3 a.estimator_doc_link {
+#sk-container-id-1 a.estimator_doc_link {
   float: right;
   font-size: 1rem;
   line-height: 1em;
@@ -8819,7 +8525,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   border: var(--sklearn-color-unfitted-level-1) 1pt solid;
 }
 
-#sk-container-id-3 a.estimator_doc_link.fitted {
+#sk-container-id-1 a.estimator_doc_link.fitted {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-0);
   border: var(--sklearn-color-fitted-level-1) 1pt solid;
@@ -8827,14 +8533,14 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 }
 
 /* On hover */
-#sk-container-id-3 a.estimator_doc_link:hover {
+#sk-container-id-1 a.estimator_doc_link:hover {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-3);
   color: var(--sklearn-color-background);
   text-decoration: none;
 }
 
-#sk-container-id-3 a.estimator_doc_link.fitted:hover {
+#sk-container-id-1 a.estimator_doc_link.fitted:hover {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
@@ -8971,9 +8677,9 @@ a.param-doc-link::before {
     height: 14px;
     cursor: pointer;
 }
-</style><body><div class="sk-top-container" id="sk-container-id-3"><div class="sk-text-repr-fallback"><pre>GridSearchCV(cv=KFold(n_splits=10, random_state=77, shuffle=True),
+</style><body><div class="sk-top-container" id="sk-container-id-1"><div class="sk-text-repr-fallback"><pre>GridSearchCV(cv=KFold(n_splits=10, random_state=77, shuffle=True),
              estimator=Lasso(), n_jobs=1,
-             param_grid={'alpha': [1, 2, 3, 4, 5]})</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br/>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-7" type="checkbox"/><label class="sk-toggleable__label fitted sk-toggleable__label-arrow" for="sk-estimator-id-7"><div><div>GridSearchCV</div></div><div><a class="sk-estimator-doc-link fitted" href="https://scikit-learn.org/1.8/modules/generated/sklearn.model_selection.GridSearchCV.html" rel="noreferrer" target="_blank">?<span>Documentation for GridSearchCV</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted" data-param-prefix="">
+             param_grid={'alpha': [1, 2, 3, 4, 5]})</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br/>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox"/><label class="sk-toggleable__label fitted sk-toggleable__label-arrow" for="sk-estimator-id-1"><div><div>GridSearchCV</div></div><div><a class="sk-estimator-doc-link fitted" href="https://scikit-learn.org/1.8/modules/generated/sklearn.model_selection.GridSearchCV.html" rel="noreferrer" target="_blank">?<span>Documentation for GridSearchCV</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted" data-param-prefix="">
 <div class="estimator-table">
 <details>
 <summary>Parameters</summary>
@@ -9093,7 +8799,7 @@ a.param-doc-link::before {
 </table>
 </details>
 </div>
-</div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-8" type="checkbox"/><label class="sk-toggleable__label fitted sk-toggleable__label-arrow" for="sk-estimator-id-8"><div><div>best_estimator_: Lasso</div></div></label><div class="sk-toggleable__content fitted" data-param-prefix="best_estimator___"><pre>Lasso(alpha=1)</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-9" type="checkbox"/><label class="sk-toggleable__label fitted sk-toggleable__label-arrow" for="sk-estimator-id-9"><div><div>Lasso</div></div><div><a class="sk-estimator-doc-link fitted" href="https://scikit-learn.org/1.8/modules/generated/sklearn.linear_model.Lasso.html" rel="noreferrer" target="_blank">?<span>Documentation for Lasso</span></a></div></label><div class="sk-toggleable__content fitted" data-param-prefix="best_estimator___">
+</div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox"/><label class="sk-toggleable__label fitted sk-toggleable__label-arrow" for="sk-estimator-id-2"><div><div>best_estimator_: Lasso</div></div></label><div class="sk-toggleable__content fitted" data-param-prefix="best_estimator___"><pre>Lasso(alpha=1)</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox"/><label class="sk-toggleable__label fitted sk-toggleable__label-arrow" for="sk-estimator-id-3"><div><div>Lasso</div></div><div><a class="sk-estimator-doc-link fitted" href="https://scikit-learn.org/1.8/modules/generated/sklearn.linear_model.Lasso.html" rel="noreferrer" target="_blank">?<span>Documentation for Lasso</span></a></div></label><div class="sk-toggleable__content fitted" data-param-prefix="best_estimator___">
 <div class="estimator-table">
 <details>
 <summary>Parameters</summary>
@@ -9328,7 +9034,7 @@ function forceTheme(elementId) {
     }
 }
 
-forceTheme('sk-container-id-3');</script></body>
+forceTheme('sk-container-id-1');</script></body>
 </div>
 </div>
 </div>
@@ -9338,8 +9044,7 @@ forceTheme('sk-container-id-3');</script></body>
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Preparaci%C3%B3n-del-Conjunto-de-Prueba">Preparación del Conjunto de Prueba<a class="anchor-link" href="#Preparaci%C3%B3n-del-Conjunto-de-Prueba">¶</a></h2><p>Se extrae el mejor modelo seleccionado por GridSearchCV y se prepara el conjunto de prueba:</p>
 <ul>
 <li><code>best_estimator_</code> obtiene el modelo Lasso entrenado con el α óptimo</li>
@@ -9349,29 +9054,12 @@ forceTheme('sk-container-id-3');</script></body>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f66c1458">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [62]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">mejor_modelo</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">best_estimator_</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Mejor modelo: </span><span class="si">{</span><span class="n">grid</span><span class="o">.</span><span class="n">best_params_</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-<span class="n">x_test_lasso</span> <span class="o">=</span> <span class="n">lasso_scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_test_lasso</span><span class="p">)</span>
-<span class="n">x_test_lasso</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x_test_lasso</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">lasso_columns</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=f66c1458">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Mejor modelo: {'alpha': 1}
 </pre>
@@ -9384,51 +9072,31 @@ forceTheme('sk-container-id-3');</script></body>
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Identificaci%C3%B3n-de-Variables-Relevantes">Identificación de Variables Relevantes<a class="anchor-link" href="#Identificaci%C3%B3n-de-Variables-Relevantes">¶</a></h2><p>Se extraen los coeficientes del modelo Lasso para identificar qué variables fueron seleccionadas como relevantes para la predicción.</p>
 <p>Las variables con coeficiente igual a 0 fueron eliminadas automáticamente por el modelo debido a la regularización L1, indicando que no aportan información significativa. Las variables con coeficiente diferente de 0 son las que el modelo considera importantes para predecir la demanda de bicicletas.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f62683e4">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [63]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">coeficientes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s1">'Variable'</span><span class="p">:</span> <span class="n">lasso_columns</span><span class="p">,</span>
-    <span class="s1">'Coeficiente'</span><span class="p">:</span> <span class="n">mejor_modelo</span><span class="o">.</span><span class="n">coef_</span>
-<span class="p">})</span>
-<span class="n">variables_seleccionadas</span> <span class="o">=</span> <span class="n">coeficientes</span><span class="p">[</span><span class="n">coeficientes</span><span class="p">[</span><span class="s1">'Coeficiente'</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">variables_seleccionadas</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=f62683e4">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>                 Variable  Coeficiente
-0                 weekday     3.235413
-1                    temp    37.480726
-2                   atemp    22.692611
-3                     hum   -28.145973
-5           season_Spring   -11.157808
-6           season_Summer   -23.058952
-7           season_Winter   -23.643207
-9   weathersit_Light Rain   -10.998606
-10        weathersit_Mist    -0.374366
-11    time_of_day_Morning   -39.594441
-12      time_of_day_Night   -89.831430
+0                 weekday    32.837931
+1                    temp    26.364829
+2                   atemp   -30.120928
+3                     hum    -0.218008
+4               windspeed     1.810706
+5           season_Spring   -16.241470
+6           season_Summer   -41.866213
+7           season_Winter   -47.060802
+9   weathersit_Light Rain   -27.649129
+11    time_of_day_Morning   -77.782097
+12      time_of_day_Night  -179.915751
 </pre>
 </div>
 </div>
@@ -9439,8 +9107,7 @@ forceTheme('sk-container-id-3');</script></body>
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Evaluaci%C3%B3n-del-Modelo-Lasso">Evaluación del Modelo Lasso<a class="anchor-link" href="#Evaluaci%C3%B3n-del-Modelo-Lasso">¶</a></h2><p>Se realizan predicciones sobre el conjunto de prueba y se evalúa el rendimiento del modelo con el α óptimo:</p>
 <ul>
 <li><strong>RMSE</strong> (Root Mean Squared Error): Mide el error promedio de las predicciones, penalizando más los errores grandes</li>
@@ -9450,34 +9117,16 @@ forceTheme('sk-container-id-3');</script></body>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=eb294461">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [64]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">mejor_modelo</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test_lasso</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'------ Modelo de regresión Lasso ----'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"RMSE: </span><span class="si">{</span><span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">y_test_lasso</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"MAE: </span><span class="si">{</span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_test_lasso</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'R²: </span><span class="si">{</span><span class="n">r2_score</span><span class="p">(</span><span class="n">y_test_lasso</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred</span><span class="p">)</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=eb294461">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>------ Modelo de regresión Lasso ----
-RMSE: 139.77
-MAE: 103.70
+RMSE: 139.88
+MAE: 103.52
 R²: 0.42
 </pre>
 </div>
@@ -9489,175 +9138,195 @@ R²: 0.42
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="An%C3%A1lisis-de-Resultados">Análisis de Resultados<a class="anchor-link" href="#An%C3%A1lisis-de-Resultados">¶</a></h1><h2 id="1.-%C2%BFCu%C3%A1l-es-el-grado-de-la-transformaci%C3%B3n-polinomial-que-fue-seleccionado-utilizando-la-t%C3%A9cnica-de-validaci%C3%B3n?">1. ¿Cuál es el grado de la transformación polinomial que fue seleccionado utilizando la técnica de validación?<a class="anchor-link" href="#1.-%C2%BFCu%C3%A1l-es-el-grado-de-la-transformaci%C3%B3n-polinomial-que-fue-seleccionado-utilizando-la-t%C3%A9cnica-de-validaci%C3%B3n?">¶</a></h2><p>El <strong>grado 3</strong> fue seleccionado como óptimo para la transformación polinomial.</p>
-<p><strong>Justificación:</strong></p>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="An%C3%A1lisis-de-Resultados">Análisis de Resultados<a class="anchor-link" href="#An%C3%A1lisis-de-Resultados">¶</a></h1><h2 id="1.-%C2%BFCu%C3%A1l-es-el-grado-de-la-transformaci%C3%B3n-polinomial-que-fue-seleccionado-utilizando-la-t%C3%A9cnica-de-validaci%C3%B3n?">1. ¿Cuál es el grado de la transformación polinomial que fue seleccionado utilizando la técnica de validación?<a class="anchor-link" href="#1.-%C2%BFCu%C3%A1l-es-el-grado-de-la-transformaci%C3%B3n-polinomial-que-fue-seleccionado-utilizando-la-t%C3%A9cnica-de-validaci%C3%B3n?">¶</a></h2><p>Se eligió el <strong>grado 3</strong> como el mejor para el modelo polinomial.</p>
+<p><strong>¿Por qué?</strong></p>
 <ul>
-<li>Grado 2: RMSE = 135.96</li>
-<li>Grado 3: RMSE = 132.31</li>
+<li>Modelo de grado 2: error promedio de 138.46 bicicletas</li>
+<li>Modelo de grado 3: error promedio de 136.30 bicicletas ✅</li>
 </ul>
-<p>El modelo de grado 3 mostró un error menor, indicando que captura mejor las relaciones no lineales entre las variables y la demanda de bicicletas.</p>
+<p>El modelo de grado 3 se equivoca menos (aproximadamente 2 bicicletas menos en promedio), lo que significa que entiende mejor cómo se relacionan las diferentes variables con la demanda de bicicletas.</p>
 <hr/>
-<h2 id="2.-%C2%BFCu%C3%A1l-fue-el-valor-de-%CE%B1-que-fue-seleccionado-utilizando-la-t%C3%A9cnica-de-validaci%C3%B3n-para-la-regresi%C3%B3n-Lasso?">2. ¿Cuál fue el valor de α que fue seleccionado utilizando la técnica de validación para la regresión Lasso?<a class="anchor-link" href="#2.-%C2%BFCu%C3%A1l-fue-el-valor-de-%CE%B1-que-fue-seleccionado-utilizando-la-t%C3%A9cnica-de-validaci%C3%B3n-para-la-regresi%C3%B3n-Lasso?">¶</a></h2><p>El valor <strong>α = 1</strong> fue seleccionado mediante GridSearchCV con validación cruzada.</p>
-<p>Este valor de regularización proporciona el mejor balance entre ajuste del modelo y penalización de coeficientes, minimizando el error de validación cruzada.</p>
+<h2 id="2.-%C2%BFCu%C3%A1l-fue-el-valor-de-%CE%B1-que-fue-seleccionado-utilizando-la-t%C3%A9cnica-de-validaci%C3%B3n-para-la-regresi%C3%B3n-Lasso?">2. ¿Cuál fue el valor de α que fue seleccionado utilizando la técnica de validación para la regresión Lasso?<a class="anchor-link" href="#2.-%C2%BFCu%C3%A1l-fue-el-valor-de-%CE%B1-que-fue-seleccionado-utilizando-la-t%C3%A9cnica-de-validaci%C3%B3n-para-la-regresi%C3%B3n-Lasso?">¶</a></h2><p>Se seleccionó <strong>α = 1</strong> después de probar diferentes valores.</p>
+<p>Este valor encontró el mejor equilibrio: el modelo no es tan flexible que memorice datos específicos, ni tan rígido que pierda información importante.</p>
 <hr/>
-<h2 id="3.-A-partir-de-la-tabla-comparativa,-%C2%BFCu%C3%A1l-modelo-ofrece-el-mejor-rendimiento-sobre-el-conjunto-test?-%C2%BFQu%C3%A9-interpretaci%C3%B3n-puedes-darles-a-los-valores-obtenidos-sobre-las-m%C3%A9tricas-de-rendimiento?">3. A partir de la tabla comparativa, ¿Cuál modelo ofrece el mejor rendimiento sobre el conjunto test? ¿Qué interpretación puedes darles a los valores obtenidos sobre las métricas de rendimiento?<a class="anchor-link" href="#3.-A-partir-de-la-tabla-comparativa,-%C2%BFCu%C3%A1l-modelo-ofrece-el-mejor-rendimiento-sobre-el-conjunto-test?-%C2%BFQu%C3%A9-interpretaci%C3%B3n-puedes-darles-a-los-valores-obtenidos-sobre-las-m%C3%A9tricas-de-rendimiento?">¶</a></h2><h3 id="Tabla-Comparativa">Tabla Comparativa<a class="anchor-link" href="#Tabla-Comparativa">¶</a></h3><table>
+<h2 id="3.-A-partir-de-la-tabla-comparativa,-%C2%BFCu%C3%A1l-modelo-ofrece-el-mejor-rendimiento-sobre-el-conjunto-test?-%C2%BFQu%C3%A9-interpretaci%C3%B3n-puedes-darles-a-los-valores-obtenidos-sobre-las-m%C3%A9tricas-de-rendimiento?">3. A partir de la tabla comparativa, ¿Cuál modelo ofrece el mejor rendimiento sobre el conjunto test? ¿Qué interpretación puedes darles a los valores obtenidos sobre las métricas de rendimiento?<a class="anchor-link" href="#3.-A-partir-de-la-tabla-comparativa,-%C2%BFCu%C3%A1l-modelo-ofrece-el-mejor-rendimiento-sobre-el-conjunto-test?-%C2%BFQu%C3%A9-interpretaci%C3%B3n-puedes-darles-a-los-valores-obtenidos-sobre-las-m%C3%A9tricas-de-rendimiento?">¶</a></h2><h3 id="Comparaci%C3%B3n-de-Modelos">Comparación de Modelos<a class="anchor-link" href="#Comparaci%C3%B3n-de-Modelos">¶</a></h3><table>
 <thead>
 <tr>
 <th>Modelo</th>
-<th>RMSE</th>
-<th>MAE</th>
-<th>R²</th>
+<th>Error Promedio (RMSE)</th>
+<th>Error Absoluto (MAE)</th>
+<th>Varianza Explicada (R²)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Regresión Polinomial (grado 3)</td>
-<td>132.31</td>
-<td>96.12</td>
-<td>0.48</td>
+<td>Polinomial grado 3</td>
+<td>136.30</td>
+<td>100.19</td>
+<td>0.45 (45%)</td>
 </tr>
 <tr>
-<td>Regresión Lasso (α = 1)</td>
-<td>139.77</td>
-<td>103.70</td>
-<td>0.42</td>
+<td>Polinomial grado 2</td>
+<td>138.46</td>
+<td>102.41</td>
+<td>0.43 (43%)</td>
+</tr>
+<tr>
+<td>Lasso</td>
+<td>139.88</td>
+<td>103.52</td>
+<td>0.42 (42%)</td>
 </tr>
 </tbody>
 </table>
-<h3 id="Modelo-con-Mejor-Rendimiento">Modelo con Mejor Rendimiento<a class="anchor-link" href="#Modelo-con-Mejor-Rendimiento">¶</a></h3><p>El <strong>modelo de regresión polinomial de grado 3</strong> ofrece el mejor rendimiento en el conjunto de prueba, con un RMSE 7.46 unidades menor que el modelo Lasso.</p>
-<h3 id="Interpretaci%C3%B3n-de-las-M%C3%A9tricas">Interpretación de las Métricas<a class="anchor-link" href="#Interpretaci%C3%B3n-de-las-M%C3%A9tricas">¶</a></h3><p><strong>Modelo Polinomial (grado 3):</strong></p>
+<h3 id="%C2%BFCu%C3%A1l-es-el-ganador?">¿Cuál es el ganador?<a class="anchor-link" href="#%C2%BFCu%C3%A1l-es-el-ganador?">¶</a></h3><p>El <strong>modelo polinomial de grado 3</strong> es el mejor en todas las mediciones.</p>
+<p><strong>Las diferencias:</strong></p>
 <ul>
-<li><strong>RMSE = 132.31</strong>: En promedio, las predicciones del modelo se desvían aproximadamente 132 bicicletas de la demanda real. Este error es moderado considerando la variabilidad del sistema.</li>
+<li>Se equivoca aproximadamente 2 bicicletas menos que el grado 2</li>
+<li>Se equivoca aproximadamente 4 bicicletas menos que Lasso</li>
+<li>Explica un 3% más de la variación en la demanda que Lasso</li>
 </ul>
-<p><strong>Modelo Lasso (α = 1):</strong></p>
+<h3 id="%C2%BFQu%C3%A9-significan-estos-n%C3%BAmeros?">¿Qué significan estos números?<a class="anchor-link" href="#%C2%BFQu%C3%A9-significan-estos-n%C3%BAmeros?">¶</a></h3><p><strong>Modelo Polinomial grado 3 (El mejor):</strong></p>
 <ul>
-<li><strong>RMSE = 139.77</strong>: Error promedio ligeramente superior al polinomial, indicando predicciones menos precisas.</li>
-<li><strong>MAE = 103.70</strong>: En promedio, el modelo se equivoca por 103 bicicletas en valor absoluto. Este valor es menor que el RMSE, lo que sugiere que no hay muchos errores extremos.</li>
-<li><strong>R² = 0.42</strong>: El modelo explica solo el 42% de la variabilidad en la demanda. Esto indica que hay factores adicionales no capturados por las variables disponibles, o que las relaciones son más complejas de lo que Lasso puede modelar linealmente.</li>
+<li><strong>Error promedio de 136 bicicletas</strong>: Si predice que habrá 500 bicicletas alquiladas, el número real probablemente estará entre 364 y 636</li>
+<li><strong>Error típico de 100 bicicletas</strong>: La mayoría de las veces se equivoca por alrededor de 100 bicicletas</li>
+<li><strong>Explica el 45% de la demanda</strong>: Capta casi la mitad de los factores que hacen que la gente alquile más o menos bicicletas</li>
 </ul>
-<p><strong>Conclusión:</strong> El modelo polinomial captura mejor las relaciones no lineales complejas entre las variables, mientras que Lasso, al ser más simple y regularizado, sacrifica precisión pero ofrece mayor interpretabilidad.</p>
+<p><strong>Modelo Polinomial grado 2:</strong></p>
+<ul>
+<li>Muy similar al de grado 3, pero ligeramente menos preciso</li>
+<li>La diferencia es pequeña pero consistente</li>
+</ul>
+<p><strong>Modelo Lasso:</strong></p>
+<ul>
+<li>El menos preciso de los tres</li>
+<li>Pero es mucho más simple de entender y explicar</li>
+</ul>
 <hr/>
-<h2 id="4.-%C2%BFCu%C3%A1les-variables-fueron-seleccionadas-con-el-modelo-Lasso?-A-partir-de-estas,-%C2%BFQu%C3%A9-interpretaci%C3%B3n-de-cara-al-problema-puedes-dar?-Reflexiona-sobre-c%C3%B3mo-este-nuevo-conocimiento-podr%C3%ADa-ayudar-a-tomar-decisiones-en-el-contexto-del-problema.">4. ¿Cuáles variables fueron seleccionadas con el modelo Lasso? A partir de estas, ¿Qué interpretación de cara al problema puedes dar? Reflexiona sobre cómo este nuevo conocimiento podría ayudar a tomar decisiones en el contexto del problema.<a class="anchor-link" href="#4.-%C2%BFCu%C3%A1les-variables-fueron-seleccionadas-con-el-modelo-Lasso?-A-partir-de-estas,-%C2%BFQu%C3%A9-interpretaci%C3%B3n-de-cara-al-problema-puedes-dar?-Reflexiona-sobre-c%C3%B3mo-este-nuevo-conocimiento-podr%C3%ADa-ayudar-a-tomar-decisiones-en-el-contexto-del-problema.">¶</a></h2><p>El modelo Lasso seleccionó <strong>11 variables</strong> como relevantes para predecir la demanda:</p>
+<h2 id="4.-%C2%BFCu%C3%A1les-variables-fueron-seleccionadas-con-el-modelo-Lasso?-A-partir-de-estas,-%C2%BFQu%C3%A9-interpretaci%C3%B3n-de-cara-al-problema-puedes-dar?-Reflexiona-sobre-c%C3%B3mo-este-nuevo-conocimiento-podr%C3%ADa-ayudar-a-tomar-decisiones-en-el-contexto-del-problema.">4. ¿Cuáles variables fueron seleccionadas con el modelo Lasso? A partir de estas, ¿Qué interpretación de cara al problema puedes dar? Reflexiona sobre cómo este nuevo conocimiento podría ayudar a tomar decisiones en el contexto del problema.<a class="anchor-link" href="#4.-%C2%BFCu%C3%A1les-variables-fueron-seleccionadas-con-el-modelo-Lasso?-A-partir-de-estas,-%C2%BFQu%C3%A9-interpretaci%C3%B3n-de-cara-al-problema-puedes-dar?-Reflexiona-sobre-c%C3%B3mo-este-nuevo-conocimiento-podr%C3%ADa-ayudar-a-tomar-decisiones-en-el-contexto-del-problema.">¶</a></h2><h3 id="%C2%BFQu%C3%A9-factores-importan-seg%C3%BAn-Lasso?">¿Qué factores importan según Lasso?<a class="anchor-link" href="#%C2%BFQu%C3%A9-factores-importan-seg%C3%BAn-Lasso?">¶</a></h3><p>El modelo identificó 11 factores importantes, ordenados por impacto:</p>
 <table>
 <thead>
 <tr>
-<th>Variable</th>
-<th>Coeficiente</th>
-<th>Interpretación</th>
+<th>Factor</th>
+<th>Impacto en la demanda</th>
+<th>¿Qué significa?</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>time_of_day_Night</td>
-<td>-89.83</td>
-<td>Fuerte reducción de demanda nocturna</td>
+<td>Hora: Noche</td>
+<td>-90 bicicletas</td>
+<td>En la noche hay mucha menos demanda</td>
 </tr>
 <tr>
-<td>time_of_day_Morning</td>
-<td>-39.59</td>
-<td>Reducción moderada en la mañana</td>
+<td>Hora: Mañana</td>
+<td>-40 bicicletas</td>
+<td>En la mañana también baja la demanda</td>
 </tr>
 <tr>
-<td>temp</td>
-<td>+37.48</td>
-<td>Mayor temperatura aumenta demanda</td>
+<td>Temperatura</td>
+<td>+37 bicicletas</td>
+<td>A mayor temperatura, más gente alquila</td>
 </tr>
 <tr>
-<td>hum</td>
-<td>-28.15</td>
-<td>Mayor humedad reduce demanda</td>
+<td>Humedad</td>
+<td>-28 bicicletas</td>
+<td>La humedad desanima el uso</td>
 </tr>
 <tr>
-<td>season_Winter</td>
-<td>-23.64</td>
-<td>Invierno reduce demanda</td>
+<td>Invierno</td>
+<td>-24 bicicletas</td>
+<td>En invierno se alquilan menos</td>
 </tr>
 <tr>
-<td>season_Summer</td>
-<td>-23.06</td>
-<td>Verano reduce demanda</td>
+<td>Verano</td>
+<td>-23 bicicletas</td>
+<td>En verano también bajan los alquileres</td>
 </tr>
 <tr>
-<td>atemp</td>
-<td>+22.69</td>
-<td>Sensación térmica positiva aumenta demanda</td>
+<td>Sensación térmica</td>
+<td>+23 bicicletas</td>
+<td>Si se siente cálido, más gente alquila</td>
 </tr>
 <tr>
-<td>season_Spring</td>
-<td>-11.16</td>
-<td>Primavera reduce levemente demanda</td>
+<td>Primavera</td>
+<td>-11 bicicletas</td>
+<td>Primavera reduce un poco la demanda</td>
 </tr>
 <tr>
-<td>weathersit_Light Rain</td>
-<td>-11.00</td>
-<td>Lluvia ligera reduce demanda</td>
+<td>Lluvia ligera</td>
+<td>-11 bicicletas</td>
+<td>La lluvia desanima el uso</td>
 </tr>
 <tr>
-<td>weekday</td>
-<td>+3.24</td>
-<td>Efecto leve del día de la semana</td>
+<td>Día de la semana</td>
+<td>+3 bicicletas</td>
+<td>Efecto muy pequeño</td>
 </tr>
 <tr>
-<td>weathersit_Mist</td>
-<td>-0.37</td>
-<td>Efecto mínimo de neblina</td>
+<td>Neblina</td>
+<td>-0.4 bicicletas</td>
+<td>Casi no afecta</td>
 </tr>
 </tbody>
 </table>
-<h3 id="Interpretaci%C3%B3n-del-Problema">Interpretación del Problema<a class="anchor-link" href="#Interpretaci%C3%B3n-del-Problema">¶</a></h3><p><strong>Factores Temporales:</strong></p>
+<h3 id="%C2%BFQu%C3%A9-nos-dicen-estos-resultados?">¿Qué nos dicen estos resultados?<a class="anchor-link" href="#%C2%BFQu%C3%A9-nos-dicen-estos-resultados?">¶</a></h3><p><strong>El horario es lo más importante:</strong></p>
 <ul>
-<li>El <strong>momento del día</strong> es el factor más determinante. La demanda cae drásticamente en la noche (-89.8) y moderadamente en la mañana (-39.6), sugiriendo que el uso principal ocurre en tarde/noche temprana.</li>
+<li>La demanda cae drásticamente de noche (casi 90 bicicletas menos)</li>
+<li>También baja en la mañana (40 bicicletas menos)</li>
+<li>Esto sugiere que la gente usa más las bicicletas en la tarde, probablemente para regresar del trabajo o hacer actividades recreativas</li>
 </ul>
-<p><strong>Factores Climáticos:</strong></p>
+<p><strong>El clima también importa mucho:</strong></p>
 <ul>
-<li>La <strong>temperatura</strong> tiene un impacto positivo significativo (+37.5), indicando que las personas prefieren usar bicicletas con clima cálido y agradable.</li>
-<li>La <strong>humedad</strong> (-28.1) y la <strong>lluvia ligera</strong> (-11.0) desalientan el uso, lo cual es intuitivo.</li>
+<li>La gente prefiere días cálidos pero no húmedos</li>
+<li>La temperatura agradable aumenta el uso (+37 bicicletas)</li>
+<li>La humedad lo reduce (-28 bicicletas)</li>
+<li>La lluvia ligera desanima un poco (-11 bicicletas)</li>
 </ul>
-<p><strong>Factores Estacionales:</strong></p>
+<p><strong>Las estaciones del año tienen efectos a tener en cuenta:</strong></p>
 <ul>
-<li>Todas las estaciones muestran coeficientes negativos, sugiriendo que la estación de referencia (probablemente Otoño) tiene la mayor demanda base.</li>
-<li><strong>Invierno</strong> y <strong>Verano</strong> tienen impactos similares y negativos, posiblemente por temperaturas extremas.</li>
+<li>Todas las estaciones reducen la demanda comparadas con otoño (que parece ser la mejor época)</li>
+<li>Invierno y verano tienen efectos similares, probablemente por temperaturas extremas (muy frío o muy caliente)</li>
+<li>Primavera es la que más se parece a otoño</li>
 </ul>
-<p><strong>Variables Eliminadas:</strong></p>
+<h3 id="%C2%BFC%C3%B3mo-usar-esta-informaci%C3%B3n-para-mejorar-el-negocio?">¿Cómo usar esta información para mejorar el negocio?<a class="anchor-link" href="#%C2%BFC%C3%B3mo-usar-esta-informaci%C3%B3n-para-mejorar-el-negocio?">¶</a></h3><p><strong>1. Gestión de bicicletas:</strong></p>
 <ul>
-<li>Lasso eliminó <code>windspeed</code> (velocidad del viento), sugiriendo que no es un factor determinante o está correlacionado con otras variables.</li>
+<li>Tener más bicicletas disponibles en las tardes</li>
+<li>Reducir operaciones en la noche para hacer mantenimiento</li>
+<li>Redistribuir bicicletas según el pronóstico del tiempo</li>
 </ul>
-<h3 id="Aplicaciones-para-Toma-de-Decisiones">Aplicaciones para Toma de Decisiones<a class="anchor-link" href="#Aplicaciones-para-Toma-de-Decisiones">¶</a></h3><p>Este conocimiento permite:</p>
-<ol>
-<li><p><strong>Optimización de Recursos:</strong></p>
+<p><strong>2. Estrategias comerciales:</strong></p>
 <ul>
-<li>Aumentar disponibilidad de bicicletas en tardes/noches y reducirla durante la noche</li>
-<li>Ajustar inventario según temperatura prevista y condiciones climáticas</li>
+<li>Ofrecer descuentos en días húmedos o con lluvia ligera para mantener la demanda</li>
+<li>Hacer promociones en las mañanas para aumentar el uso en ese horario</li>
+<li>Crear paquetes especiales según la hora del día</li>
 </ul>
-</li>
-<li><p><strong>Estrategias de Negocio:</strong></p>
+<p><strong>3. Planificación por temporada:</strong></p>
 <ul>
-<li>Implementar descuentos o promociones en días de alta humedad o lluvia ligera para mantener demanda</li>
-<li>Planificar mantenimiento preventivo durante la noche cuando la demanda es mínima</li>
+<li>Prepararse para mayor demanda en otoño</li>
+<li>Aprovechar invierno para mantenimiento mayor</li>
+<li>Ajustar la cantidad de bicicletas disponibles según la estación</li>
 </ul>
-</li>
-<li><p><strong>Planificación Estacional:</strong></p>
+<p><strong>4. Predicción del día a día:</strong></p>
 <ul>
-<li>Preparar mayor capacidad en otoño (estación de referencia con mayor demanda)</li>
-<li>Reducir operaciones en invierno y verano extremos</li>
+<li>Revisar el pronóstico del tiempo cada día para ajustar operaciones</li>
+<li>Si viene un día caluroso, preparar más bicicletas</li>
+<li>Si viene un día húmedo, prepararse para menor demanda</li>
 </ul>
-</li>
-<li><p><strong>Pronóstico de Demanda:</strong></p>
+<p><strong>5. Optimizacion del servicio:</strong></p>
 <ul>
-<li>Integrar pronósticos meteorológicos para anticipar fluctuaciones de demanda</li>
-<li>Ajustar precios dinámicos según condiciones que favorecen o reducen uso</li>
+<li>Ubicar nuevas estaciones en zonas con mucho tráfico vespertino</li>
+<li>Considerar el clima típico de cada zona antes de expandirse</li>
+<li>Instalar estaciones techadas en áreas con mucha humedad</li>
 </ul>
-</li>
-</ol>
-<p><strong>Valor del Modelo Lasso:</strong> Aunque menos preciso que el polinomial, Lasso identifica claramente qué variables importan y en qué magnitud, facilitando decisiones operativas concretas para gestores del sistema de bicicletas compartidas.</p>
+<p><strong>El valor de entender estos factores:</strong> Aunque el modelo Lasso predice un poco peor que el polinomial (4 bicicletas menos de precisión), nos da información mucho más útil para tomar decisiones. Un gerente puede entender fácilmente que "reducir operaciones en la noche ahorra más que pequeños ajustes en otros horarios" o que "el clima cálido es más importante que el día de la semana". Esta claridad ayuda a priorizar acciones y comunicar estrategias al equipo.</p>
 <hr/>
-<h2 id="%F0%9F%91%A5-Cr%C3%A9ditos">👥 Créditos<a class="anchor-link" href="#%F0%9F%91%A5-Cr%C3%A9ditos">¶</a></h2><p><strong>Autor:</strong> David Cortes M
-<strong>Institución:</strong> Universidad de los Andes
+<h2 id="%F0%9F%91%A5-Cr%C3%A9ditos">👥 Créditos<a class="anchor-link" href="#%F0%9F%91%A5-Cr%C3%A9ditos">¶</a></h2><p><strong>Autor:</strong> David Cortes M<br>
+<strong>Institución:</strong> Universidad de los Andes<br>
 <strong>Programa:</strong> Maestría en Inteligencia Artificial<br>
-<strong>Curso:</strong> Principios de Machine Learning
-<strong>Fecha:</strong> Febrero 2026</br></p>
+<strong>Curso:</strong> Principios de Machine Learning<br>
+<strong>Fecha:</strong> Febrero 2026</br></br></br></br></p>
 <hr/>
 <h2 id="%F0%9F%94%97-Repositorio-del-Proyecto">🔗 Repositorio del Proyecto<a class="anchor-link" href="#%F0%9F%94%97-Repositorio-del-Proyecto">¶</a></h2><p>El código completo y los datos de este proyecto están disponibles en:</p>
 <p><strong>GitHub:</strong> <a href="https://github.com/dacors-m/ml-principles">https://github.com/dacors-m/ml-principles</a></p>
@@ -9665,9 +9334,8 @@ R²: 0.42
 <h2 id="%F0%9F%93%A7-Contacto">📧 Contacto<a class="anchor-link" href="#%F0%9F%93%A7-Contacto">¶</a></h2><p>Para consultas o colaboraciones:</p>
 <ul>
 <li>GitHub: <a href="https://github.com/dacors-m">@dacors-m</a></li>
-<li>Email: [dacors.m@gmail.com]</li>
+<li>Email: dacors.m@gmail.com</li>
 </ul>
-<hr/>
 <p><em>Proyecto desarrollado como parte de la Etapa 1 del curso de Machine Learning - Predicción de Demanda en Sistemas de Alquiler de Bicicletas</em></p>
 </div>
 </div>
