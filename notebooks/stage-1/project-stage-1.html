@@ -13273,7 +13273,6 @@ dtype: int64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Detecci%C3%B3n-de-Registros-Duplicados">Detección de Registros Duplicados<a class="anchor-link" href="#Detecci%C3%B3n-de-Registros-Duplicados">¶</a></h2><p>Se verifica la cantidad de filas duplicadas en el dataset usando <code>duplicated().sum()</code>. Esta función identifica registros que son idénticos en todas sus columnas.</p>
-<p>Detectar duplicados es esencial para asegurar la calidad de los datos y evitar sesgos en el análisis posterior.</p>
 </div>
 </div>
 </div>
@@ -13302,7 +13301,6 @@ dtype: int64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Eliminaci%C3%B3n-de-Duplicados">Eliminación de Duplicados<a class="anchor-link" href="#Eliminaci%C3%B3n-de-Duplicados">¶</a></h2><p>Se procede a eliminar todas las filas duplicadas del dataset usando <code>drop_duplicates()</code>. Posteriormente, se verifica con <code>duplicated().sum()</code> que la eliminación fue exitosa.</p>
-<p>Este proceso asegura que cada registro sea único, evitando redundancia y posibles distorsiones en el análisis de datos.</p>
 </div>
 </div>
 </div>
@@ -13486,13 +13484,12 @@ dtype: int64</pre>
 <li><strong>X</strong>: Contiene todas las variables independientes (features) excepto <code>cnt</code></li>
 <li><strong>y</strong>: Contiene la variable objetivo <code>cnt</code> (demanda de bicicletas)</li>
 </ul>
-<p>Posteriormente, se divide el dataset en conjuntos de entrenamiento y prueba usando <code>train_test_split</code>:</p>
+<p>Se divide el dataset en conjuntos de entrenamiento y prueba usando <code>train_test_split</code>:</p>
 <ul>
 <li><strong>80%</strong> de los datos para entrenamiento (<code>x_train</code>, <code>y_train</code>)</li>
 <li><strong>20%</strong> de los datos para prueba (<code>x_test</code>, <code>y_test</code>)</li>
 <li><code>random_state=77</code> asegura reproducibilidad de los resultados</li>
 </ul>
-<p>Esta división permite evaluar el rendimiento del modelo en datos no vistos durante el entrenamiento.</p>
 </div>
 </div>
 </div>
@@ -13525,7 +13522,6 @@ dtype: int64</pre>
 <li><p><strong>Recombinación</strong>: Se concatenan las variables numéricas transformadas con las variables categóricas originales, creando el dataset completo de entrenamiento</p>
 </li>
 </ol>
-<p>Esta aproximación permite capturar relaciones no lineales en variables climáticas sin afectar la interpretación de las variables categóricas.</p>
 </div>
 </div>
 </div>
@@ -13654,7 +13650,6 @@ R²: 0.43
 <li><p><strong>Recombinación</strong>: Se concatenan las variables numéricas transformadas con las variables categóricas originales</p>
 </li>
 </ol>
-<p>Este enfoque permite al modelo capturar patrones más complejos en los datos climáticos, mejorando potencialmente la capacidad predictiva a costa de mayor complejidad.</p>
 </div>
 </div>
 </div>
